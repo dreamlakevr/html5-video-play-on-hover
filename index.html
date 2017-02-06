@@ -19,20 +19,463 @@ Source: https://www.youtube.com/watch?v=nZcejtAwxz4
 
 More info on youtube api for thumbnails: http://stackoverflow.com/questions/2068344/how-do-i-get-a-youtube-video-thumbnail-from-the-youtube-api
 -->
-<div id="videosList">           
+<!--
+    <div id="videosList">           
 
-<div class="video">
-    <video class="thevideo" loop preload="none">
-      <source src="http://giant.gfycat.com/VerifiableTerrificHind.mp4" type="video/mp4">
-      <source src="http://giant.gfycat.com/VerifiableTerrificHind.webm" type="video/webm">
-    Your browser does not support the video tag.
-    </video>
-  </div>
-  Hover mouse over video. Desktop only [ Obviously! ;) ]
-</div>
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+        <div class="video">
+            <video style="background-image: url('http://www.dreamlake.nl/wp-content/uploads/2016/02/hans.jpg');" class="thevideo" loop preload="none">
+            <source src="http://www.dreamlake.nl/wp-content/uploads/2016/02/Hans_01_gear.webm" onmouseout="reload()" type="video/webm">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+ 
+    </div>
+    <div id="videosList">           
+
+        <div class="video">
+            <video style="background-image: url('http://www.dreamlake.nl/wp-content/uploads/2016/02/hans.jpg');" class="thevideo" loop preload="none">
+            <source src="http://www.dreamlake.nl/wp-content/uploads/2016/02/Hans_01_gear.webm" onmouseout="reload()" type="video/webm">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+ 
+    </div>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
     <script src="js/index.js"></script>
 
+
+-->
+
+<!--
+    <body onload="onload();">
+    <video id="idle_video" width="1280" height="720" onended="onVideoEnded();"></video>
+    <script>
+        var video_list      = ["http://www.dreamlake.nl/wp-content/uploads/2016/02/Hans_01_gear.webm",
+                                "http://www.dreamlake.nl/wp-content/uploads/2016/02/Walewein_02_left.webm",
+                                "Mount Airy Casino Resort- Summer TV Ad 2.mp4"
+                            ];
+        var video_index     = 0;
+        var video_player    = null;
+
+        function onload(){
+            console.log("body loaded");
+            video_player        = document.getElementById("idle_video");
+            video_player.setAttribute("src", video_list[video_index]);
+            video_player.play();
+        }
+
+        function onVideoEnded(){
+            console.log("video ended");
+            if(video_index < video_list.length - 1){
+                video_index++;
+            }
+            else{
+                video_index = 0;
+            }
+            video_player.setAttribute("src", video_list[video_index]);
+            video_player.play();
+        }
+    </script>
+</body>
+-->
+    <script>
+    
+    var videoHans = document.getElementById("videoHans"); 
+    var videoWalewein = document.getElementById("videoWalewein"); 
+    var videoIsrael = document.getElementById("videoIsrael"); 
+    var videoJohannes = document.getElementById("videoJohannes"); 
+    var videoLuis = document.getElementById("videoLuis"); 
+    var videoBart = document.getElementById("videoBart"); 
+
+
+function playHans() { 
+    var videoHans = document.getElementById("videoHans"); 
+    var videoWalewein = document.getElementById("videoWalewein"); 
+    var videoIsrael = document.getElementById("videoIsrael"); 
+    var videoJohannes = document.getElementById("videoJohannes"); 
+    var videoLuis = document.getElementById("videoLuis"); 
+    var videoBart = document.getElementById("videoBart"); 
+
+    videoHans.src = "http://www.dreamlake.nl/wp-content/uploads/2016/02/Hans_01_gear.webm";
+    videoHans.play();
+    
+    videoWalewein.src = "http://www.dreamlake.nl/wp-content/uploads/2016/02/Walewein_02_left.webm";
+    videoWalewein.play();
+    
+    videoIsrael.src = "http://www.dreamlake.nl/wp-content/uploads/2016/02/Israel_02_left.webm";
+    videoIsrael.play();
+    
+    videoJohannes.src = "http://www.dreamlake.nl/wp-content/uploads/2016/02/Johannes_03_top.webm";
+    videoJohannes.play();
+    
+    videoLuis.src = "http://www.dreamlake.nl/wp-content/uploads/2016/02/Luis_06_upleft.webm";
+    videoLuis.play();
+    
+    videoBart.src = "http://www.dreamlake.nl/wp-content/uploads/2016/02/Bart_06_topleft.webm";
+    videoBart.play();
+} 
+
+function playWalewein() { 
+    var videoHans = document.getElementById("videoHans"); 
+    var videoWalewein = document.getElementById("videoWalewein"); 
+    var videoIsrael = document.getElementById("videoIsrael"); 
+    var videoJohannes = document.getElementById("videoJohannes"); 
+    var videoLuis = document.getElementById("videoLuis"); 
+    var videoBart = document.getElementById("videoBart"); 
+
+    videoHans.src = "http://www.dreamlake.nl/wp-content/uploads/2016/02/Hans_04_right.webm";
+    videoHans.play();
+
+    videoWalewein.src = "http://www.dreamlake.nl/wp-content/uploads/2016/02/Walewein_01_gear.webm";
+    videoWalewein.play();
+    
+    videoIsrael.src = "http://www.dreamlake.nl/wp-content/uploads/2016/02/Israel_02_left.webm";
+    videoIsrael.play();
+    
+    videoJohannes.src = "http://www.dreamlake.nl/wp-content/uploads/2016/02/Johannes_08_topright.webm";
+    videoJohannes.play();
+    
+    videoLuis.src = "http://www.dreamlake.nl/wp-content/uploads/2016/02/Luis_03_up.webm";
+    videoLuis.play();
+    
+    videoBart.src = "http://www.dreamlake.nl/wp-content/uploads/2016/02/Bart_06_topleft.webm";
+    videoBart.play();
+} 
+
+function playIsrael() { 
+    var videoHans = document.getElementById("videoHans"); 
+    var videoWalewein = document.getElementById("videoWalewein"); 
+    var videoIsrael = document.getElementById("videoIsrael"); 
+    var videoJohannes = document.getElementById("videoJohannes"); 
+    var videoLuis = document.getElementById("videoLuis"); 
+    var videoBart = document.getElementById("videoBart"); 
+
+    videoHans.src = "http://www.dreamlake.nl/wp-content/uploads/2016/02/Hans_04_right.webm";
+    videoHans.play();
+
+    videoWalewein.src = "http://www.dreamlake.nl/wp-content/uploads/2016/02/Walewein_04_right.webm";
+    videoWalewein.play();
+    
+    videoIsrael.src = "http://www.dreamlake.nl/wp-content/uploads/2016/02/Israel_01_gear.webm";
+    videoIsrael.play();
+    
+    videoJohannes.src = "http://www.dreamlake.nl/wp-content/uploads/2016/02/Johannes_08_topright.webm";
+    videoJohannes.play();
+    
+    videoLuis.src = "http://www.dreamlake.nl/wp-content/uploads/2016/02/Luis_08_upright.webm";
+    videoLuis.play();
+    
+    videoBart.src = "http://www.dreamlake.nl/wp-content/uploads/2016/02/Bart_03_up.webm";
+    videoBart.play();
+} 
+
+function playJohannes() { 
+    var videoHans = document.getElementById("videoHans"); 
+    var videoWalewein = document.getElementById("videoWalewein"); 
+    var videoIsrael = document.getElementById("videoIsrael"); 
+    var videoJohannes = document.getElementById("videoJohannes"); 
+    var videoLuis = document.getElementById("videoLuis"); 
+    var videoBart = document.getElementById("videoBart"); 
+
+    videoHans.src = "http://www.dreamlake.nl/wp-content/uploads/2016/02/Hans_05_down.webm";
+    videoHans.play();
+
+    videoWalewein.src = "http://www.dreamlake.nl/wp-content/uploads/2016/02/Walewein_08_downleft.webm";
+    videoWalewein.play();
+    
+    videoIsrael.src = "http://www.dreamlake.nl/wp-content/uploads/2016/02/Israel_07_downleft.webm";
+    videoIsrael.play();
+    
+    videoJohannes.src = "http://www.dreamlake.nl/wp-content/uploads/2016/02/Johannes_01_gear.webm";
+    videoJohannes.play();
+    
+    videoLuis.src = "http://www.dreamlake.nl/wp-content/uploads/2016/02/Luis_02_left.webm";
+    videoLuis.play();
+    
+    videoBart.src = "http://www.dreamlake.nl/wp-content/uploads/2016/02/Bart_02_left.webm";
+    videoBart.play();
+} 
+
+function playLuis() { 
+    var videoHans = document.getElementById("videoHans"); 
+    var videoWalewein = document.getElementById("videoWalewein"); 
+    var videoIsrael = document.getElementById("videoIsrael"); 
+    var videoJohannes = document.getElementById("videoJohannes"); 
+    var videoLuis = document.getElementById("videoLuis"); 
+    var videoBart = document.getElementById("videoBart"); 
+
+    videoHans.src = "http://www.dreamlake.nl/wp-content/uploads/2016/02/Hans_09_downright.webm";
+    videoHans.play();
+
+    videoWalewein.src = "http://www.dreamlake.nl/wp-content/uploads/2016/02/Walewein_05_down.webm";
+    videoWalewein.play();
+    
+    videoIsrael.src = "http://www.dreamlake.nl/wp-content/uploads/2016/02/Israel_07_downleft.webm";
+    videoIsrael.play();
+    
+    videoJohannes.src = "http://www.dreamlake.nl/wp-content/uploads/2016/02/Johannes_04_right.webm";
+    videoJohannes.play();
+    
+    videoLuis.src = "http://www.dreamlake.nl/wp-content/uploads/2016/02/Luis_01_Gear.webm";
+    videoLuis.play();
+    
+    videoBart.src = "http://www.dreamlake.nl/wp-content/uploads/2016/02/Bart_02_left.webm";
+    videoBart.play();
+} 
+
+function playBart() { 
+    var videoHans = document.getElementById("videoHans"); 
+    var videoWalewein = document.getElementById("videoWalewein"); 
+    var videoIsrael = document.getElementById("videoIsrael"); 
+    var videoJohannes = document.getElementById("videoJohannes"); 
+    var videoLuis = document.getElementById("videoLuis"); 
+    var videoBart = document.getElementById("videoBart"); 
+
+    videoHans.src = "http://www.dreamlake.nl/wp-content/uploads/2016/02/Hans_09_downright.webm";
+    videoHans.play();
+
+    videoWalewein.src = "http://www.dreamlake.nl/wp-content/uploads/2016/02/Walewein_09_downright.webm";
+    videoWalewein.play();
+    
+    videoIsrael.src = "http://www.dreamlake.nl/wp-content/uploads/2016/02/Israel_05_down.webm";
+    videoIsrael.play();
+    
+    videoJohannes.src = "http://www.dreamlake.nl/wp-content/uploads/2016/02/Johannes_04_right.webm";
+    videoJohannes.play();
+    
+    videoLuis.src = "http://www.dreamlake.nl/wp-content/uploads/2016/02/Luis_04_right.webm";
+    videoLuis.play();
+    
+    videoBart.src = "http://www.dreamlake.nl/wp-content/uploads/2016/02/Bart_01_gear.webm";
+    videoBart.play();
+} 
+
+function reload() { 
+    var videoHans = document.getElementById("videoHans"); 
+    var videoWalewein = document.getElementById("videoWalewein"); 
+    var videoIsrael = document.getElementById("videoIsrael"); 
+    var videoJohannes = document.getElementById("videoJohannes"); 
+    var videoLuis = document.getElementById("videoLuis"); 
+    var videoBart = document.getElementById("videoBart"); 
+
+   videoHans.load();
+   videoWalewein.load();
+   videoIsrael.load();
+   videoJohannes.load();
+   videoLuis.load();
+   videoBart.load();
+}
+    </script>
+    
+    
+div  style="margin-top:100px;" class="vc_separator wpb_content_element vc_separator_align_center vc_el_width_100 vc_sep_color_black">
+<span class="vc_sep_holder vc_sep_holder_l"><span style="border-color: rgba(0,0,0,0);" class="vc_sep_line"></span></span>
+<h1 style="color:#282828;">CONTACT US</h1>
+<span class="vc_sep_holder vc_sep_holder_r"><span style="border-color: rgba(0,0,0,0);" class="vc_sep_line"></span></span>
+</div>
+<div class="wpb_row vc_row-fluid">
+	<div class="vc_span4 columna_padding wpb_column column_container">
+		<div class="wpb_wrapper">
+			
+	<div class="wpb_raw_code wpb_content_element wpb_raw_html">
+		<div class="wpb_wrapper">
+			<video poster="http://www.dreamlake.nl/wp-content/uploads/2016/02/hans.jpg" 
+src="http://www.dreamlake.nl/wp-content/uploads/2016/02/Hans_01_gear.webm" 
+id="videoHans" 
+width="100%" 
+onMouseOver="playHans()" 
+onMouseOut="reload()" 
+loop ="" 
+height = "320px">
+</video>
+
+ <div class="movietext unselectable">
+
+
+        <span style="font-weight:900; font-size:24px; line-height:24px;">
+            
+                Hans Van Vlijmen
+            
+        </span>
+
+
+<div class = "descriptiontext">
+        <span style="font-weight:400; font-size:14px; line-height:14px;"> <p>
+                 CEO
+        </p></span>
+
+</div>
+
+</div>
+
+		</div> 
+	</div> 
+		</div> 
+	</div> 
+
+	<div class="vc_span4 columnb_padding wpb_column column_container">
+		<div class="wpb_wrapper">
+			
+	<div class="wpb_raw_code wpb_content_element wpb_raw_html">
+		<div class="wpb_wrapper">
+			<video poster="http://www.dreamlake.nl/wp-content/uploads/2016/02/walewein.jpg" 
+src="http://www.dreamlake.nl/wp-content/uploads/2016/02/Walewein_01_gear.webm" 
+id="videoWalewein" 
+width="100%" 
+onMouseOver="playWalewein()" 
+onMouseOut="reload()" 
+loop ="" 
+height = "320px">
+</video>
+
+ <div class="movietext unselectable">
+
+        <span style="font-weight:900; font-size:24px; line-height:24px;">
+            
+                Walewein Luchtmeijer
+            
+        </span>
+        <span style="font-weight:400; font-size:14px; line-height:14px;"> <p>
+                 Business Developer
+        </p></span>
+
+
+</div>
+		</div> 
+	</div> 
+		</div> 
+	</div> 
+
+	<div class="vc_span4 columnc_padding wpb_column column_container">
+		<div class="wpb_wrapper">
+			
+	<div class="wpb_raw_code wpb_content_element wpb_raw_html">
+		<div class="wpb_wrapper">
+			<video poster="http://www.dreamlake.nl/wp-content/uploads/2016/02/israel2.jpg" 
+src="http://www.dreamlake.nl/wp-content/uploads/2016/02/Israel_01_gear.webm" 
+id="videoIsrael" 
+width="100%" 
+onMouseOver="playIsrael()" 
+onMouseOut="reload()" 
+loop ="" 
+height = "320px">
+</video>
+
+ <div class="movietext unselectable">
+
+        <span style="font-weight:900; font-size:24px; line-height:24px;">
+            
+                Israel Jamlean
+            
+        </span>
+        <span style="font-weight:400; font-size:14px; line-height:14px;"> <p>
+                 Coding Wizard
+        </p></span>
+
+
+</div>
+		</div> 
+	</div> 
+		</div> 
+	</div> 
+</div><div class="wpb_row vc_row-fluid">
+	<div class="vc_span4 wpb_column column_container">
+		<div class="wpb_wrapper">
+			
+	<div class="wpb_raw_code wpb_content_element wpb_raw_html">
+		<div class="wpb_wrapper">
+			<video poster="http://www.dreamlake.nl/wp-content/uploads/2016/02/johannes1.jpg" 
+src="http://www.dreamlake.nl/wp-content/uploads/2016/02/Johannes_01_gear.webm" 
+id="videoJohannes" 
+width="100%" 
+onMouseOver="playJohannes()" 
+onMouseOut="reload()" 
+loop ="" 
+height = "320px">
+</video>
+
+ <div class="movietext unselectable">
+
+        <span style="font-weight:900; font-size:24px; line-height:24px;">
+            
+                Johannes Dijkman
+            
+        </span>
+        <span style="font-weight:400; font-size:14px; line-height:14px;"> <p>
+                 Art Maker
+        </p></span>
+
+
+</div>
+		</div> 
+	</div> 
+		</div> 
+	</div> 
+
+	<div class="vc_span4 wpb_column column_container">
+		<div class="wpb_wrapper">
+			
+	<div class="wpb_raw_code wpb_content_element wpb_raw_html">
+		<div class="wpb_wrapper">
+			<video poster="http://www.dreamlake.nl/wp-content/uploads/2016/02/luis1.jpg" 
+src="http://www.dreamlake.nl/wp-content/uploads/2016/02/Luis_01_Gear.webm" 
+id="videoLuis" 
+width="100%" 
+onMouseOver="playLuis()" 
+onMouseOut="reload()" 
+loop =""
+height = "320px" >
+</video>
+
+ <div class="movietext unselectable">
+
+        <span style="font-weight:900; font-size:24px; line-height:24px;">
+            
+                Luis Oliveira
+            
+        </span>
+        <span style="font-weight:400; font-size:14px; line-height:14px;"> <p>
+                 Dreamer
+        </p></span>
+
+
+</div>
+		</div> 
+	</div> 
+		</div> 
+	</div> 
+
+	<div class="vc_span4 wpb_column column_container">
+		<div class="wpb_wrapper">
+			
+	<div class="wpb_raw_code wpb_content_element wpb_raw_html">
+		<div class="wpb_wrapper">
+			<video poster="http://www.dreamlake.nl/wp-content/uploads/2016/02/bart1.jpg" 
+src="http://www.dreamlake.nl/wp-content/uploads/2016/02/Bart_01_gear.webm" 
+id="videoBart" 
+width="100%" 
+onMouseOver="playBart()" 
+onMouseOut="reload()" 
+loop ="" 
+height = "320px">
+</video>
+
+ <div class="movietext unselectable">
+
+        <span style="font-weight:900; font-size:24px; line-height:24px;">
+            
+                Bart Geers
+            
+        </span>
+        <span style="font-weight:400; font-size:14px; line-height:14px;"> <p>
+                 Experience Bringer
+        </p></span>
+
+
+</div>
+    
+    
 </body>
 </html>
+
