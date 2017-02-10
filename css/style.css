@@ -3,17 +3,19 @@
 .videoContainer {
     float: left;
     max-width: 320px;
+    display: inline-block;
 }
 
 .videoContainer-row{
+    position: relative;
    
     clear: both;
     
 }
 .wp-container {
-   margin: 0;
-  position: absolute;
-    top: 20%;
+
+    margin: 0;
+    position: absolute;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, 0%)
@@ -23,3 +25,81 @@ body {
      height: 10em;
     position: relative }
 }
+
+
+
+
+website
+
+
+.videoContainer {
+    float: left;
+    max-width: 320px;
+    display: inline-block;
+}
+
+.videoContainer-row{
+    position: relative;
+   
+    clear: both;
+    
+}
+.wp-container {
+
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 0%)
+}
+
+.card-shadow{
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.card-shadow:hover {
+  box-shadow: 0 7px 14px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+
+#top-menu-nav {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    padding-left: 64px;
+    padding-right: 64px;
+}
+
+#top-menu-nav ul li a:hover {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+
+
+/* home */
+#menu-item-146 {
+  position: fixed;
+    left: 20px;
+    top: 16px;
+  background: url(http://localhost:8888/wp-content/uploads/2017/02/dreamlake-logo-green.svg) no-repeat top left;
+}
+
+#menu-item-146 a{
+    margin-top: 32px;
+    color: rgba(0, 0, 0, 0);
+}
+
+/* contact */
+#menu-item-145{
+   position: fixed;
+   right: 20px;
+   top: 16px;
+   background: url(http://localhost:8888/wp-content/uploads/2017/02/icn-directions.svg) no-repeat top left;
+}
+
+#menu-item-145 a {
+   margin-top: 32px;
+    margin-bottom: -32px;
+    margin-left: -12px;
+}
+
